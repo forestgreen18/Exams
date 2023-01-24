@@ -1,10 +1,10 @@
-// // Split an array into two parts
+// Split an array into two parts
 
 const splitArray = (index, array) => {
   const begin = array.slice(0, index);
-  const length = array.length;
+  const { length } = array;
   const end = array.slice(index, length);
   return [begin, end];
 };
 
-require('../Tests/split.js')(splitArray);
+require("../Tests/split.js")(splitArray);
