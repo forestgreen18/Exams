@@ -5,7 +5,7 @@ const getValueBetween = (str, p, s) => {
   const prefixEndIndex = prefixStartIndex + p.length;
   const suffixStartIndex = str.indexOf(s);
 
-  if ([prefixStartIndex, suffixStartIndex].includes(-1)) {
+  if (prefixStartIndex === -1 || suffixStartIndex === -1) {
     return "";
   }
   return str.slice(prefixEndIndex, suffixStartIndex);
